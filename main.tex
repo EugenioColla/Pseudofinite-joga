@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Keisler measures and pseudofinite joga}
+\author{}
+\date{November 2018}
+
+\begin{document}
+
+\maketitle
+
+Schema generale: Domination theorem-----> traduzione e compattezza------> teorema su grafi infiniti e loro regolarità-------> pseudofinite joga----------------> teorema su grafi finiti e loro regolarità
+\section{Domande}
+
+Prima domanda: Si riesce a far sì che Hales jewett density assomigli a un teorema di dominazione? Hales jewett density è infinito?
+
+Seconda domanda: c'è una tame version di Hales jewett density, o ha senso considerarla?
+
+Provare con polynomial hales jewett density? Forse esagerato
+
+Probabilmente il problema da approcciare è Carlson Simpson density.
+
+Secondo me il modello sarà quello delle parole su A, con variabile x. Tutti i sottoinsiemi sono definibili. La misura di Keisler, per facilità, è data da lim e non limsup (con limsup non è una misura. Per estendere poi a limsup probabilmente si può dire x ha misura 0 ma esiste y con misura 0 tale che x+y hanno misura non 0... quindi neanche lim è una misura...)
+Ma esistono misure finitamente additive che estendono la frequenza relativa.
+
+Progetto: capire perché é vero Carlson Simpson, e se è ancora legato agli idempotenti. Probabilmente no.
+
+Sviluppare la seguente: in Hindman da un idempotente si passa a una catena chiusa per somma e monocromatica. Da una catena chiusa per somma (monocromatica) si passa a un tipo incompleto idempotente (monocromatico). Se ci fosse un elemento w di M che manda tutta la catena in D allora saremmo (quasi) a posto, nel senso che anche il tipo sarebbe mappato in D. 
+
+Questo tentativo vorrebbe dire che ogni insieme abbastanza grande contiene una traslazione di un sotto semigruppo (perché un insieme infinito chiuso per somme è un semigruppo). Secondo me questo è falso (prendi come D una cosa che contenga solamente $\displaystyle A^{2^n}$, allora non c'è alcuna parola w con sottosemigruppo G tale che $wG\subseteq D$). Non riesco a capire se cambiando $w\in M$ con $w\in C$ cambi qualcosa. Secondo me comunque non c'è un idempotente che traslato di w vada in D (per D particolari)
+
+Devo trovare una sequenza $u_i$ di variable words, indipendenti nel senso di nonforking, tali che esiste una singola parola w, possibilmente nel modello, tale che prodotti di w e $\sigma u_i$ vadano tutti in $D$. Nota che necessariamente $u_i$ non è in D, perché sono variable words. Secondo me si può togliere questa w, ottenendo inizialmente un teorema meno forte. Quindi il teorema parrebbe senza menzione di w (tanto può essere assorbito nella parola $\sigma_0$.
+
+Quindi costruisci $u_0$ tale che $\Sigma{u_0}=\bigcup_\sigma\in \Sigma \sigma u_0$ sia contenuto in $D$. Devi dimostrare che esiste, e questo usa la densità di $D$ in qualche modo. Poi si trova $u_1$ indipendente da $u_0$ tale che tutti i prodotti di $\sigma u_o$ per $\sigma_1$.
+
+Quando c'è w questa parola w non può essere qualunque, credo. 
+
+Tentativo naive: prendo un tipo con una tupla infinita x che dice che x0 è indipendente da x1, xn da xristretto a n, e che i prodotti finiti delle sigma vanno in D. Il problema è che x non forka y non è tipo definibile (il problema è a sinistra, sulla x). 
+
+LEGGERE DA QUA (UNA SETTIMANA DOPO)
+
+Vogliamo trovare una sequenza $u_i$ nel mostro, indipendenti, tale che $\Sigma u_0\subseteq D$, e $\prod \Sigma u_i\subseteq D$. Se non ho sbagliato ragionamento, non solo non si può prendere un tipo idempotenti in cui c'è la sequenza $u_i$, ma nemmeno si può prendere un tipo completo, modulo la seguente domanda.
+
+Domanda: ogni sequenza indipendente in un tipo completo è indiscernibile?
+
+Infatti, se si prendesse un tipo completo e una sequenza di indiscernibili e indipendenti all'interno di questo tipo, allora si potrebbe "portare" nella sequenza del modello che anche i prodotti delle Sigma degli elementi ordinati in modo diverso ancora stanno in D (ad esempio prodotto di $\Sigma u_2 $ per $\Sigma u_4$ dovrebbe essere contenuto in $D$. Ma se prendiamo $D$ come una cosa che contenga solamente $\displaystyle A^{2^n}$, allora non esiste alcuna sequenza che soddisfi queste condizioni così forti. 
+
+Dunque dobbiamo trovare un'altra sequenza infinita, di indipendenti. Il vantaggio di lavorare nel mostro qua è più dubbio. Un tentativo potrebbe essere quello di trovare un solo tipo nel mostro del mostro. Esiste sempre? Magari idempotente?
+Dobbiamo capire se gli stessi assurdi arriverebbero anche in questo caso.
+
+Secondo me non è tanto lo stare nello stesso tipo il problema, ma nell'indiscernibilità. Non possiamo chiedere che la sequenza sia indiscernibile. Per questo motivo a mio avviso non si può passare al mostro del mostro per avere una sequenza indsicernibile. Si porterebbero delle formule nella sequenza del mostro e, essendo questa una sequenza di indipendenti, le stesse formule varrebbero nella sequenza del modello piccolo.
+
+Nota: il carattere finito potrebbe FOrse far sì che l'indipendenza si possa portare alla fine.
+
+\end{document}
